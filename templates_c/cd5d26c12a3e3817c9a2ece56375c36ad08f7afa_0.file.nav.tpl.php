@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-18 06:51:13
+/* Smarty version 3.1.30, created on 2017-11-25 07:03:33
   from "C:\mountain\PHP\UniServerZ\www\reporter\templates\nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0fd861686e35_08146205',
+  'unifunc' => 'content_5a1915c5b7ad16_36165232',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0fd861686e35_08146205 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1915c5b7ad16_36165232 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="navbar navbar-expand-md navbar-dark sticky-top bg-dark py-0">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu">

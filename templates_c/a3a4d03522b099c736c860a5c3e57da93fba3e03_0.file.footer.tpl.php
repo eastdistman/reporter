@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-18 08:01:40
+/* Smarty version 3.1.30, created on 2017-11-25 07:03:33
   from "C:\mountain\PHP\UniServerZ\www\reporter\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0fe8e4dffa26_66222278',
+  'unifunc' => 'content_5a1915c5bb7291_74667024',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0fe8e4dffa26_66222278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1915c5bb7291_74667024 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="footer">
     <footer class="bg-dark text-white fixed-bottom">

@@ -46,6 +46,41 @@ function insert_article()
     $db->query($sql) or die($db->error . $sql);
     $sn = $db->insert_id;
 
+    upload_pic($sn);
+
+    return $sn;
+
+}
+
+function delete_article($sn)
+{
+    global $db;
+
+    $sql = "DELETE FROM `article` WHERE sn='{$sn}'and username='{$_SESSION['username']}'";
+    $db->query($sql) or die($db->error);
+}
+
+//更新文章
+function update_article($sn)
+{
+    global $db;
+    $title    = $db->real_escape_string($_POST['title']);
+    $content  = $db->real_escape_string($_POST['content']);
+    $username = $db->real_escape_string($_POST['username']);
+
+    $sql = "UPDATE `article` SET `title`='{$title}', `content`='{$content}', `update_time`= NOW() WHERE `sn`='{$sn}'";
+    $db->query($sql) or die($db->error);
+
+    upload_pic($sn);
+
+    return $sn;
+
+}
+
+//上傳圖片;
+function upload_pic($sn)
+{
+
     if (isset($_FILES)) {
         require_once 'class.upload.php';
         $foo = new Upload($_FILES['pic']);
@@ -66,22 +101,5 @@ function insert_article()
                 $foo->Process('uploads/');
             }
         }
-
-        // $ext = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION);
-        // if (!is_dir('uploads')) {
-        //     mkdir('uploads');
-        // }
-        // move_uploaded_file($_FILES['pic']['tmp_name'], "uploads/{$sn}.{$ext}");
     }
-
-    return $sn;
-
-}
-
-function delete_article($sn)
-{
-    global $db;
-
-    $sql = "DELETE FROM `article` WHERE sn='{$sn}'and username='{$_SESSION['username']}'";
-    $db->query($sql) or die($db->error);
 }
