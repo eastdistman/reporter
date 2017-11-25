@@ -74,7 +74,7 @@ function update_article($sn)
     $content  = $db->real_escape_string($_POST['content']);
     $username = $db->real_escape_string($_POST['username']);
 
-    $sql = "UPDATE `article` SET `title`='{$title}', `content`='{$content}', `update_time`= NOW() WHERE `sn`='{$sn}' and username='{$_SESSION['username']}";
+    $sql = "UPDATE `article` SET `title`='{$title}', `content`='{$content}', `update_time`= NOW() WHERE `sn`='{$sn}' and username='{$_SESSION['username']}'";
     $db->query($sql) or die($db->error);
 
     upload_pic($sn);
@@ -83,7 +83,7 @@ function update_article($sn)
 
 }
 
-//上傳圖片;
+//上傳圖片
 function upload_pic($sn)
 {
 

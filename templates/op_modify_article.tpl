@@ -1,9 +1,13 @@
+<script src="js/languages/jquery.validationEngine-zh_TW.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css">
+
 <script src="ckeditor/ckeditor.js"></script>
 
-<form action="admin.php" method="post" enctype="multipart/form-data">
+<form action="admin.php" method="post" enctype="multipart/form-data" id="myform">
     <div class="form-group">
         <label for="title" class="col-form-label sc-only">文章標題</label>
-        <input type="text" class="form-control" name="title" id="title" placeholder="輸入文章標題" value="{$article.title}">
+        <input type="text" class="form-control validate[required, minSize[4]]" name="title" id="title" placeholder="輸入文章標題" value="{$article.title}">
     </div>
     <div class="form-group">
         <label for="content" class="col-form-label sr-only">文章內容</label>
@@ -25,4 +29,8 @@
 
 <script>
     CKEDITOR.replace('content');
+    $(document).ready(function () {
+        $('#myform').validationEngine({ promptPosition: "bottomLeft" });
+    });
+
 </script>
